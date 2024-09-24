@@ -9,6 +9,8 @@ public class MyAccountPage extends BasePage {
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
 	}
+	@FindBy(xpath="//i[@class='fa fa-home']")
+	WebElement btnHome;
 
 	@FindBy(xpath = "//h2[text()='My Account']") // MyAccount Page heading
 	WebElement msgHeading;
@@ -30,5 +32,9 @@ public class MyAccountPage extends BasePage {
 		lnkLogout.click();
 
 	}
+	public void clickHome() {
+		btnHome.click();
+	}
+	
 	
 }
